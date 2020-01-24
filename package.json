@@ -1,20 +1,35 @@
 {
-  "name": "infinity-bottle",
-  "version": "1.0.0",
-  "description": "A simple CRUD app built to keep track of your personal infinity bottle recipe and progress",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adutta91/infinity-bottle.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/adutta91/infinity-bottle/issues"
-  },
-  "homepage": "https://github.com/adutta91/infinity-bottle#readme"
+	"name": "infinity-bottle",
+	"version": "1.0.0",
+	"description": "A simple CRUD app built to keep track of your personal infinity bottle recipe and progress",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node server/app.js",
+		"build": "next build",
+		"start": "next start",
+		"export": "next export"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adutta91/infinity-bottle.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/adutta91/infinity-bottle/issues"
+	},
+	"homepage": "https://github.com/adutta91/infinity-bottle#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"mysql2": "^2.1.0",
+		"next": "^9.2.0",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"sequelize": "^5.21.3"
+	},
+	"devDependencies": {
+		"sequelize-cli": "^5.5.1"
+	}
 }
