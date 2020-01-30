@@ -1,3 +1,4 @@
 /node_modules
 /.next
-/config/config.json
+config.json
+auth_config.json

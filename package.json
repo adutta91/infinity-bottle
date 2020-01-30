@@ -22,12 +22,16 @@
 	},
 	"homepage": "https://github.com/adutta91/infinity-bottle#readme",
 	"dependencies": {
+		"@auth0/auth0-spa-js": "^1.6.3",
 		"express": "^4.17.1",
 		"mysql2": "^2.1.0",
 		"next": "^9.2.0",
 		"react": "^16.12.0",
 		"react-dom": "^16.12.0",
-		"sequelize": "^5.21.3"
+		"react-router": "^5.1.2",
+		"react-router-dom": "^5.1.2",
+		"sequelize": "^5.21.3",
+		"use-auth0-hooks": "^0.7.0"
 	},
 	"devDependencies": {
 		"sequelize-cli": "^5.5.1"
