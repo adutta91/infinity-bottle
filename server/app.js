@@ -13,6 +13,8 @@ app
   .then(() => {
     const server = express();
 
+    server.use(express.static("public"));
+
     server.get("*", (req, res) => {
       return handle(req, res);
     });

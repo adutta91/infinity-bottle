@@ -5,10 +5,17 @@ import config from "../../utils/auth_config.json";
 
 const NavBar = () => {
   const { pathname, query } = useRouter();
-  const { isAuthenticated, isLoading, login, logout } = useAuth();
+  const {
+    loading,
+    user,
+    isAuthenticated,
+    isLoading,
+    login,
+    logout
+  } = useAuth();
 
   return (
-    <navbar>
+    <nav>
       {!isAuthenticated && (
         <button
           onClick={() =>
@@ -27,7 +34,7 @@ const NavBar = () => {
           Log out
         </button>
       )}
-    </navbar>
+    </nav>
   );
 };
 
