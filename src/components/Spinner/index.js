@@ -3,6 +3,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSpinner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @keyframes spin {
     0% {
       transform: rotate(0deg);

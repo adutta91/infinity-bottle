@@ -1,40 +1,23 @@
 import React from "react";
-import { useRouter } from "next/router";
-import { useAuth } from "use-auth0-hooks";
-import config from "../../utils/auth_config.json";
+import Logo from "./Logo";
+import AuthButton from "./AuthButton";
+import styled from "styled-components";
+
+const StyledNav = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 0;
+`;
 
 const NavBar = () => {
-  const { pathname, query } = useRouter();
-  const {
-    loading,
-    user,
-    isAuthenticated,
-    isLoading,
-    login,
-    logout
-  } = useAuth();
-
   return (
-    <nav>
-      {!isAuthenticated && (
-        <button
-          onClick={() =>
-            login({
-              redirect_uri: config.redirect_uri,
-              appState: { returnTo: { pathname, query } }
-            })
-          }
-        >
-          Log in
-        </button>
-      )}
-
-      {isAuthenticated && (
-        <button onClick={() => logout({ returnTo: config.redirect_uri })}>
-          Log out
-        </button>
-      )}
-    </nav>
+    <StyledNav>
+      <Logo />
+      <AuthButton />
+    </StyledNav>
   );
 };
 
